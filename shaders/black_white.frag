@@ -10,8 +10,8 @@ out vec4 FragColor;
 
 void main() {
     FragColor = texture(image, texcoord);
-    float L = 0.299 * FragColor[0] + 0.587 * FragColor[1] + 0.114 * FragColor[2];
-    FragColor[0] = L;
-    FragColor[1] = L;
-    FragColor[2] = L;
+    float L = 0.299 * FragColor.r + 0.587 * FragColor.g + 0.114 * FragColor.b;
+    FragColor.r = L;
+    FragColor.g = L;
+    FragColor.b = L;
 }
